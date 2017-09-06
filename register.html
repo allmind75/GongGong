@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>공간을 공유하다</title>
+    <title>공공</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="shortcut icon" href="favicon.png">
@@ -86,15 +86,15 @@
                     <div class="col-md-12">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 scrollpoint sp-effect1">
-                                <form role="form" action="#">
+                                <form role="form" action="matching.html">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="이름">
+                                        <input type="text" class="form-control" placeholder="이름" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="tel" inputmode="numeric" pattern="[0-9]{0,11}" onkeypress="onlyNumber()" class="form-control" placeholder="연락처">
+                                        <input type="tel" inputmode="numeric" pattern="[0-9]{0,11}" onkeypress="onlyNumber()" class="form-control" placeholder="연락처" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="이메일">
+                                        <input type="email" class="form-control" placeholder="이메일" required>
                                     </div>
                                     <div class="form-group">
                                         <input type="text" id="postcode" class="form-control form-date" placeholder="우편번호" readonly>
@@ -107,11 +107,11 @@
                                         <input type="text" id="address2" class="form-control" placeholder="상세주소">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-harf" placeholder="업종">
-                                        <input type="text" class="form-control form-harf" placeholder="공간크기">                                    </div>
+                                        <input type="text" class="form-control form-harf" placeholder="업종" required>
+                                        <input type="text" class="form-control form-harf" placeholder="공간크기" required>                                    </div>
                                     <div class="form-group">
-                                        <input type="date" class="form-control form-date" placeholder="연도-월-일"> ~
-                                        <input type="date" class="form-control form-date" placeholder="연도-월-일">
+                                        <input type="date" class="form-control form-date" placeholder="연도-월-일" required> ~
+                                        <input type="date" class="form-control form-date" placeholder="연도-월-일" required>
                                     </div>
                                     <div class="form-group">
                                         <input type="file" class="form-control form-file">
