@@ -63,8 +63,10 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#support">공간등록신청</a>
-                        </li>
+                      <li><a href="register.html">공간등록신청</a>
+                      </li>
+                      <li><a href="use.html">공간이용신청</a>
+                      </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -84,12 +86,12 @@
                     <div class="col-md-12">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 scrollpoint sp-effect1">
-                                <form role="form" action="">
+                                <form role="form" action="#">
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="이름">
                                     </div>
                                     <div class="form-group">
-                                        <input type="tel" class="form-control" placeholder="연락처">
+                                        <input type="tel" inputmode="numeric" pattern="[0-9]{0,11}" onkeypress="onlyNumber()" class="form-control" placeholder="연락처">
                                     </div>
                                     <div class="form-group">
                                         <input type="email" class="form-control" placeholder="이메일">
@@ -114,8 +116,7 @@
                                     <div class="form-group">
                                         <input type="file" class="form-control form-file">
                                     </div>
-                                    <button type="submit" class="btn btn-primary submit btn-lg">신청</button>
-                                </form>
+                                    <input type="submit" class="btn btn-primary submit btn-lg" value="등록">                                </form>
                             </div>
                         </div>
                     </div>
@@ -155,6 +156,11 @@
         $(document).ready(function() {
             appMaster.preLoader();
         });
+
+        function onlyNumber(){
+          if((event.keyCode<48)||(event.keyCode>57))
+             event.returnValue=false;
+        }
 
         function SearchAddr() {
           new daum.Postcode({
