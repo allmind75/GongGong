@@ -58,19 +58,29 @@ top: 0; left: 0; border-left: 8px solid #0070c0; padding: 8px 0;}
 
 
 /* matching.html */
-.wrapper .match {position: fixed; top: 45%; left: 50%; margin-left: -100px; margin-top: -100px; text-align: center;}
-.wrapper .matching-img {width: 200px; height: auto;
-  animation: rotate ease-in-out 1.5s 0s infinite;
+.wrapper .match {position: fixed; top: 45%; left: 50%; margin-left: -80px; margin-top: -80px; text-align: center;}
+.wrapper .matching-img {width: 160px; height: auto; z-index: 50;
+  animation: rotate ease-in-out 0s 0s infinite;
 }
-.wrapper .arrow p {font-size: 30px; font-weight: bold; color: #777; display: inline-block;}
+.wrapper .searching-img {width: 220px; height: auto; z-index: 30; position: fixed; top: 38%; left: 50%;
+  margin-left: -110px; margin-top: -110px; animation: search ease-in-out 3s 0s infinite; opacity: 0.4}
+
+.wrapper .store-img1 {position: fixed; top: 25%; left: 28%; width: 20px; height: 20px; z-index: 100;}
+.wrapper .store-img2 {position: fixed; top: 60%; width: 20px; height: 20px; z-index: 100;}
+.wrapper .store-img3 {position: fixed; top: 30%; left: 78%; width: 20px; height: 20px; z-index: 100;}
+.wrapper .store-img4 {position: fixed; top: 40%; left: 22%; width: 20px; height: 20px; z-index: 100;}
+
+
+
+.wrapper .arrow p {position: fixed; top: 52%; left: 41%; font-size: 30px; font-weight: bold; color: #777; display: inline-block;}
 .arrow {position: relative;}
 .arrow i {position: absolute; left: 45%; top: 28%; font-size: 20px; color: #0070c0; display: inline-block; opacity: 0;}
-.arrow .left1 {animation: arrow-left linear 2s 0s infinite;}
-.arrow .left2 {animation: arrow-left linear 2s 1s infinite;}
-.arrow .left3 {animation: arrow-left linear 2s 2s infinite;}
-.arrow .right1 {animation: arrow-right linear 2s 0s infinite;}
-.arrow .right2 {animation: arrow-right linear 2s 1s infinite;}
-.arrow .right3 {animation: arrow-right linear 2s 2s infinite;}
+.arrow .left1 {animation: arrow-left linear 0s 0s infinite;}
+.arrow .left2 {animation: arrow-left linear 0s 1s infinite;}
+.arrow .left3 {animation: arrow-left linear 0s 2s infinite;}
+.arrow .right1 {animation: arrow-right linear 0s 0s infinite;}
+.arrow .right2 {animation: arrow-right linear 0s 1s infinite;}
+.arrow .right3 {animation: arrow-right linear 0s 2s infinite;}
 
 
 
@@ -82,6 +92,11 @@ top: 0; left: 0; border-left: 8px solid #0070c0; padding: 8px 0;}
 @-webkit-keyframes rotate {
     0%   { -webkit-transform: rotateY(0); }
     100% { -webkit-transform: rotateY(360deg); }
+}
+
+@keyframes search {
+    0%   { transform: rotate(0); transform-origin: 50% 100%;}
+    100% { transform: rotate(360deg); transform-origin: 50% 100%;}
 }
 
 @keyframes arrow-left {
